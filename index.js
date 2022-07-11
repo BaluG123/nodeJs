@@ -1,4 +1,3 @@
-console.log('balu')
 /* CHECKING FANDAMENTALS , WE CAN'T ASSIGN TWO VALUES TO CONS'T
 var a=20;
 let b=30;
@@ -39,13 +38,60 @@ http.createServer((req,res)=>{
 }).listen(8888);
 console.log('server is running on port 8888') */
 
+/* PASSING FUNCTION AS A PARAMETER!!
 const http=require('http')
 function dataControl(req,res){
     res.write('<h1><i>My name is Balu!</i></h1>')
     res.end();
 }
 http.createServer(dataControl).listen(8888);
-console.log('server is running on portal 8888!')
+console.log('server is running on portal 8888!') */
 
+/*
 const fs=require('fs');
 fs.writeFileSync('balu.txt','my name is u know right!?')
+*/
+
+/* TESTING COLOR PACKAGE!!(COLOR MODULE ALREADY INSTALLED!)
+const colors=require('colors')
+console.log('my name is balu!'.red)
+*/
+
+/* THIS IS CREATING SERVER AND WRITEING SIMPLE BASIC API INSIDE IT!
+console.log('balu')
+const data=require('./data')
+const http=require('http')
+http.createServer((req,res)=>{
+    res.writeHead(200,{'Content-Type':'application/json'});
+    res.write(JSON.stringify(data));
+    res.end()
+}).listen(8888);
+console.log('server is running on port 8888');
+console.log('its working totally fine!')
+*/
+
+/* THIS EXAMPLE IS TO GET INPUT FROM CMD AND PROCESS IT
+const fs=require('fs')
+const input=process.argv;
+if (input[2]=='add'){
+  fs.writeFileSync(input[3],input[4])
+}
+else if(input[2]=='remove'){
+    fs.unlinkSync(input[3])
+}
+else{
+    console.log('invalid output')
+}
+*/
+
+/* GETTING CURRENT PATH 
+const fs=require('fs')
+const path=require('path')
+const dirpath=path.join(__dirname)
+console.log(dirpath)
+*/
+
+const fs=require('fs')
+const path=require('path')
+const dirpath=path.join(__dirname,'files')
+console.log(dirpath)
