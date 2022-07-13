@@ -52,10 +52,12 @@ const fs=require('fs');
 fs.writeFileSync('balu.txt','my name is u know right!?')
 */
 
-/* TESTING COLOR PACKAGE!!(COLOR MODULE ALREADY INSTALLED!)
-const colors=require('colors')
-console.log('my name is balu!'.red)
+//TESTING COLOR PACKAGE!!(COLOR MODULE ALREADY INSTALLED!)
+/*
+const colors=require('console-log-colors')
+console.log(colors("colors.red('my name is balu!')"))
 */
+
 
 /* THIS IS CREATING SERVER AND WRITEING SIMPLE BASIC API INSIDE IT!
 console.log('balu')
@@ -91,7 +93,93 @@ const dirpath=path.join(__dirname)
 console.log(dirpath)
 */
 
+/* THIS CODE IS TO CHECK CURRENT FILE OF THE PROJECT
 const fs=require('fs')
 const path=require('path')
 const dirpath=path.join(__dirname,'files')
-console.log(dirpath)
+console.log(dirpath) */
+
+// THIS BELOW CODE IS TO WRITE(CREATE) AND READ FILES IN NODE JS)
+/*
+const fs=require('fs')
+const path=require('path')
+const dirpath=path.join(__dirname,'files')
+for(var i=0;i<5;i++){
+    fs.writeFileSync(dirpath+'/hello'+i+'.txt','some dummy files')
+}
+
+fs.readdir(dirpath,(err,files)=>{
+    files.forEach((item)=>{
+        console.log(item)
+        console.log(err)
+    })
+})  */
+
+/* BELOW CODE IS CRUD OPERATIONS
+const fs=require('fs')
+const path=require('path')
+const dirpath=path.join(__dirname,'crud')
+// TO CREATE A FILE !!
+//fs.writeFileSync(`${dirpath}/apple.txt`,'this is some apple file text')
+const filePath=`${dirpath}/apple.txt`
+// TO READ A FILE !!
+//fs.readFile(filePath,'utf8',(err,item)=>{ //if you don't give 'utf8' it will display some random output with buffer
+//    console.log(item)
+//})
+// THIS IS TO UPDATE THE FILE 
+//fs.appendFile(filePath,' and i am trying to do my best with kibb com , god please let me achieve my goals',(err)=>{
+//    if(!err) console.log('file is updated!')
+//}
+//)
+// TO RENAME THE FILE
+//fs.rename(filePath,`${dirpath}/fruit.txt`,(err)=>{
+//    if(!err) console.log('renamed successfully!')
+//})
+// TO DELETE A FILE!
+//fs.unlinkSync(`${dirpath}/fruit.txt`)
+//console.log('file deleted successfully!')
+*/
+
+
+//Asyncranous checking !
+/* it won't wait for logic execution it will execute last console.log !!
+console.log('start the execution..!')
+setTimeout(()=>{
+    console.log('logic execution..!')
+},2000)
+console.log('end the execution..!')
+*/
+
+// promises to remove this problem !
+/* PROMISES ARE BEST
+let a=10;
+let b=0;
+let waitingData = new Promise((resolve,reject)=>{
+    setTimeout(()=>{
+        resolve(30)
+    },2000)
+})
+waitingData.then((data)=>{
+    b=data
+    console.log(a+b)
+}) */
+
+//EXPRESS JS INTRO
+/*
+const express=require('express');
+const app=express();
+app.get('',(req,res)=>{
+    res.send('hello, this is home pAge')
+});
+app.get('/about',(req,res)=>{
+    res.send('hello, this is about Us page!')
+});
+app.get('/help',(req,res)=>{
+    res.send('this is help page!')
+})
+app.listen(8888) */
+
+
+
+
+

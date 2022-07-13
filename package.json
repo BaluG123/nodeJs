@@ -1,0 +1,31 @@
+{
+  "name": "nodejs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BaluG123/nodeJs.git"
+  },
+  "keywords": [
+    "balu's",
+    "node",
+    "js",
+    "in",
+    "company",
+    "laptop"
+  ],
+  "author": "balu g",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BaluG123/nodeJs/issues"
+  },
+  "homepage": "https://github.com/BaluG123/nodeJs#readme",
+  "dependencies": {
+    "console-log-colors": "^0.2.3",
+    "express": "^4.18.1"
+  }
+}
